@@ -1,0 +1,275 @@
+/* =====================================
+   BASE: HTML & BODY a pantalla completa
+===================================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  }
+  
+  /* =====================================
+     CONTENEDOR PRINCIPAL
+  ===================================== */
+  .home-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* =====================================
+     SWIPER PRINCIPAL
+  ===================================== */
+  .main-carousel {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* =====================================
+     SLIDE INDIVIDUAL
+  ===================================== */
+  .slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* =====================================
+     OVERLAY OSCURO SOBRE LA IMAGEN
+  ===================================== */
+  .slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55); /* Oscurece imagen de fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  /* =====================================
+     TEXTO CENTRAL
+  ===================================== */
+  .slide-text {
+    color: white;
+    margin-bottom: 40px;
+  }
+  
+  .slide-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .slide-text p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* =====================================
+     TARJETAS INFORMATIVAS
+  ===================================== */
+  .slide-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .info-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .info-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #f0a500;
+  }
+  
+  .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  .info-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* =====================================
+     SWIPER CONTROLES
+  ===================================== */
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+  }
+  
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #f0a500;
+  }
+  
+  /* =====================================
+     RESPONSIVE DISEÑO
+  ===================================== */
+  @media (max-width: 768px) {
+    .slide-text h2 {
+      font-size: 2rem;
+    }
+  
+    .slide-text p {
+      font-size: 1rem;
+    }
+  
+    .slide-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .info-card {
+      width: 90%;
+    }
+  }
+/*VARIABLES PARA EL CAMBIO DE TEMA*/
+  :root {
+    /* Variables de tema claro */
+    --background-color-light: #ffffff;
+    --text-color-light: #333333;
+    --primary-color-light: #0066cc;
+    --secondary-color-light: #f0a500;
+    --card-bg-light: rgba(255, 255, 255, 0.9);
+    --card-text-light: #1a1a1a;
+    --card-shadow-light: rgba(0, 0, 0, 0.15);
+    --navbar-bg-light: rgba(255, 255, 255, 0.9);
+    --navbar-text-light: #333333;
+    --footer-bg-light: rgba(255, 255, 255, 0.9);
+    --footer-text-light: #666666;
+  
+    /* Variables de tema oscuro */
+    --background-color-dark: #1a1a1a;
+    --text-color-dark: #ffffff;
+    --primary-color-dark: #4d94ff;
+    --secondary-color-dark: #ffc107;
+    --card-bg-dark: rgba(45, 45, 45, 0.9);
+    --card-text-dark: #ffffff;
+    --card-shadow-dark: rgba(0, 0, 0, 0.3);
+    --navbar-bg-dark: rgba(45, 45, 45, 0.9);
+    --navbar-text-dark: #ffffff;
+    --footer-bg-dark: rgba(45, 45, 45, 0.9);
+    --footer-text-dark: #cccccc;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--navbar-bg-light);
+    color: var(--navbar-text-light);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-dark .navbar {
+    background-color: var(--navbar-bg-dark);
+    color: var(--navbar-text-dark);
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--footer-bg-light);
+    color: var(--footer-text-light);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .theme-dark .footer {
+    background-color: var(--footer-bg-dark);
+    color: var(--footer-text-dark);
+  }
+  
+  /* Tarjetas */
+  .info-card {
+    background-color: var(--card-bg-light);
+    color: var(--card-text-light);
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px var(--card-shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  .theme-dark .info-card {
+    background-color: var(--card-bg-dark);
+    color: var(--card-text-dark);
+    box-shadow: 0 4px 12px var(--card-shadow-dark);
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--card-shadow-light);
+  }
+  
+  .theme-dark .info-card:hover {
+    box-shadow: 0 8px 16px var(--card-shadow-dark);
+  }
+  
+  .info-card i {
+    color: var(--secondary-color-light);
+  }
+  
+  .theme-dark .info-card i {
+    color: var(--secondary-color-dark);
+  }
+  
+  /* Enlaces del navbar */
+  .nav-links a {
+    color: var(--navbar-text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .theme-dark .nav-links a {
+    color: var(--navbar-text-dark);
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color-light);
+  }
+  
+  .theme-dark .nav-links a:hover {
+    color: var(--primary-color-dark);
+  }

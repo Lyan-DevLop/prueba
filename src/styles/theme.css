@@ -1,0 +1,56 @@
+:root {
+    /* Variables de tema claro */
+    --background-color-light: #ffffff;
+    --text-color-light: #333333;
+    --primary-color-light: #0066cc;
+    --secondary-color-light: #f0a500;
+    --card-bg-light: rgba(255, 255, 255, 0.9);
+    --card-text-light: #1a1a1a;
+    --card-shadow-light: rgba(0, 0, 0, 0.15);
+  
+    /* Variables de tema oscuro */
+    --background-color-dark: #1a1a1a;
+    --text-color-dark: #ffffff;
+    --primary-color-dark: #4d94ff;
+    --secondary-color-dark: #ffc107;
+    --card-bg-dark: rgba(45, 45, 45, 0.9);
+    --card-text-dark: #ffffff;
+    --card-shadow-dark: rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Clases de tema */
+  .theme-light {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --card-bg: var(--card-bg-light);
+    --card-text: var(--card-text-light);
+    --card-shadow: var(--card-shadow-light);
+  }
+  
+  .theme-dark {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --card-bg: var(--card-bg-dark);
+    --card-text: var(--card-text-dark);
+    --card-shadow: var(--card-shadow-dark);
+  }
+  
+  /* ... existing code ... */
+  
+  .info-card {
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    box-shadow: 0 4px 12px var(--card-shadow);
+  }
+  
+  .info-card i {
+    color: var(--secondary-color);
+  }
+  
+  .info-card p {
+    color: var(--card-text);
+  }
